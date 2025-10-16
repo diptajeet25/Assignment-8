@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Banner from '../Banner/Banner';
+import Cards from '../Card/Cards';
 
 const Home = () => {
+    const trendApps=fetch("/trendApps.json").then(res=>res.json())
     return (
         <div>
             
@@ -10,6 +12,9 @@ const Home = () => {
                 <h1 className='text-3xl font-bold'>Trending Apps</h1>
                 <p className='text-lg text-gray-500'>Explore all Trending Apps on the Market developed by us.</p>
             </div>
+            <Suspense fallback={<p>Loading</p>}>
+<Cards trendApps={trendApps}></Cards>
+            </Suspense>
         </div>
     );
 };

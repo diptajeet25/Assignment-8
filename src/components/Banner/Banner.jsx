@@ -4,14 +4,15 @@ import appstore from '../../assets/appstore.png';
 import hero from '../../assets/hero.png';
 
 const Banner = () => {
+
     return (
         <>
         <div className='flex justify-center items-center flex-col w-[90%] lg:w-[60%] mx-auto mt-8'>
             <h2 className='text-4xl font-bold text-black'>We Build <span className='text-purple-600'>Productive </span>Apps</h2>
             <p className='text-black'>At HERO.IO , we craft innovative apps designed to make everyday life simpler, smarter, and more exciting.Our goal is to turn your ideas into digital experiences that truly make an impact.</p>
             <div className='mt-4'>
-                <button className='btn btn-outline btn-secondary mr-4'><img src={playsstore} alt="" className='h-4' />Play Store</button>
-                <button className='btn btn-outline btn-secondary'><img src={appstore} alt="" className='h-4' />App Store</button>
+                <button onClick={()=> window.open("https://play.google.com/store/games?device=windows", "_blank")} className='btn btn-outline btn-secondary mr-4'><img src={playsstore} alt="" className='h-4' />Play Store</button>
+                <button onClick={()=> window.open("https://www.apple.com/app-store/", "_blank")} className='btn btn-outline btn-secondary'><img src={appstore} alt="" className='h-4' />App Store</button>
             </div>
             
         </div>

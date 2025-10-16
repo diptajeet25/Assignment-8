@@ -1,16 +1,34 @@
 import React from 'react';
 import logo from '../../assets/logo.png'
 import github from '../../assets/github.png'
+import { NavLink } from 'react-router';
+import "./Navbar.css"
+
 
 const Navbar = () => {
     const link=
     <>
-<li className='text-lg'><a>Home</a></li>
-        <li className='text-lg'><a>Apps</a></li>
-        <li className='text-lg'><a>Installation</a></li>
+<li className='text-lg'>
+  <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
+    Home
+  </NavLink>
+</li>
+
+<li className='text-lg'>
+  <NavLink to="/apps"  className={({ isActive }) => (isActive ? "active" : "")}>
+    Apps
+  </NavLink>
+</li>
+
+<li className='text-lg'>
+  <NavLink  className={({ isActive }) => (isActive ? "active" : "noactive")}>
+    Installation
+  </NavLink>
+</li>
+
     </>
     return (
-        <div className="navbar bg-white text-black shadow-sm px-6">
+        <div className="navbar bg-white text-black shadow-sm px-2 lg:px-6">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -18,11 +36,11 @@ const Navbar = () => {
       </div>
       <ul
         tabIndex="-1"
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        className="menu menu-sm dropdown-content bg-white rounded-box z-1 mt-3 font-bold w-52 p-2 shadow">
         {link}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl"><img src={logo} className='h-10' alt="" /><span className='text-2xl text-purple-600'>HERO.IO</span></a>
+    <NavLink to="/" className="btn btn-ghost text-xl"><img src={logo} className='h-10' alt="" /><span className='text-2xl text-purple-600'>HERO.IO</span></NavLink>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -30,7 +48,7 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn btn-primary"><img src={github} className='h-6 mr-1' alt="" />Contribute</a>
+    <NavLink to="https://github.com/diptajeet25" className="btn btn-primary"><img src={github} className='h-6 mr-1' alt="" />Contribute</NavLink>
   </div>
 </div>
     );
