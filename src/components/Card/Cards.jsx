@@ -1,7 +1,9 @@
 import React, { use } from 'react';
 import Card from './Card';
+import { useNavigate } from 'react-router';
 
 const Cards = ({trendApps}) => {
+    const navigate=useNavigate();
     const appsData=use(trendApps);
     console.log(appsData);
     return (
@@ -11,7 +13,7 @@ const Cards = ({trendApps}) => {
                     appsData.map(app=> <Card key={app.id} app={app}></Card> )
                 }
             </div>
-            <button className="btn btn-primary text-2xl mt-4 p-4 py-6">Show More</button>
+            <button onClick={()=>navigate("/apps")} className="btn btn-primary text-2xl mt-4 p-4 py-6">Show More</button>
         </div>
     );
 };

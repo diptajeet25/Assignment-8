@@ -1,12 +1,13 @@
 import React from 'react';
 import download from "../../assets/icon-downloads.png"
 import rating from "../../assets/icon-ratings.png"
+import AppDetails from '../AppDetails/AppDetails';
 
 const Card = ({app}) => {
    
     const{title,image,downloads,ratingAvg}=app
     return (
-        <div>
+        <div onClick={<AppDetails app={app}></AppDetails>}>
             <div className="card bg-gray-100 text-black border-1 border-black   shadow-sm">
   <figure>
     <img

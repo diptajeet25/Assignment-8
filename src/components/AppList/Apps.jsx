@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router';
 import Card from '../Card/Card';
+import NoApp from '../../assets/App-Error.png'
 
 const Apps = () => {
     const useData=useLoaderData();
@@ -38,7 +39,12 @@ if(e.target.value=="")
            </div>
            <div className='w-[95%] my-16 mt-8 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {
+                appList.length ?
+                
+                ( 
                 appList.map(app=><Card key={app.id} app={app}></Card> )
+                ):(<img src={NoApp} className='w-[550px] col-span-full mx-auto block'></img>)
+                
             }
            </div>
 
