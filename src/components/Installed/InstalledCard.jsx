@@ -1,14 +1,16 @@
 import React from 'react';
 import download from '../../assets/icon-downloads.png'
 import rating from '../../assets/icon-ratings.png'
+import { useNavigate } from 'react-router';
 
 const InstalledCard = ({i,handleUninstall}) => {
     
     const{image,title,downloads,ratingAvg,size,id}=i
+    const navigate=useNavigate();
   
     return (
-        <div className='bg-white mx-2 py-2 px-2 flex justify-between items-center border-2 border-gray-600 rounded-xl'>
-            <div className='flex text-black gap-4'>
+        <div  className='bg-white mx-2 py-2 px-2 flex justify-between items-center border-2 border-gray-600 rounded-xl'>
+            <div onClick={()=>navigate(`/apps/${id}`)} className='flex text-black gap-4'>
                 <img src={image} alt="" srcset="" className='w-24 rounded-2xl'/>
                 <div className='flex flex-col gap-1'>
                     <h3 className='text-black text-2xl font-bold'>{title}</h3>

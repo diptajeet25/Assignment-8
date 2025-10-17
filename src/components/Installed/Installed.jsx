@@ -18,23 +18,28 @@ const Installed = () => {
     }
     const highToLow=()=>
     {
-         console.log("Sort Korsi re vai")
+        
         const newArray=[...installed].sort((a,b)=>parseFloat(b.downloads)-parseFloat(a.downloads));
         setInstalled(newArray)
-        console.log("Sort Korsi re vai")
+        
     }
     const lowToHigh=()=>
     {
-         console.log("Sort Korsi re vai")
+         
         const newArray=[...installed].sort((a,b)=>parseFloat(a.downloads)-parseFloat(b.downloads));
-        setInstalled(newArray)
-        console.log(" choto theke boro Sort Korsi re vai")
+        setInstalled(newArray) 
+        
     }
     return (
-        <>
-        <div className='mx-3 mt-4 flex justify-between items-center'>
+        <div className='min-h-svh'>
+        <div className='my-16'>
+            <h3 className='text-black text-3xl text-center font-bold'>Installed Application</h3>
+            <p className='text-lg text-gray-500 text-center'>
+  Browse all your installed apps and manage them easily. Stay organized with just a click!
+</p></div>
+        <div className='mx-3 mt-12  flex justify-between items-center lg:w-[68%] lg:mx-auto'>
             <h3 className='font-bold text-2xl text-black'>{installed.length} Apps Found</h3>
-            <select defaultValue="" className="bg-white w-44  text-black select appearance-none" onChange={(e)=>
+            <select defaultValue="" className="bg-white w-44 border-black border-1 text-black select appearance-none" onChange={(e)=>
                 {
                     if(e.target.value==="HighToLow")
                     {
@@ -52,13 +57,13 @@ const Installed = () => {
   
 </select>
         </div>
-        <div className='flex flex-col gap-4 my-4 lg:w-[70%] mx-auto'>
+        <div className='flex flex-col gap-4 my-3 mb-24 lg:w-[70%] mx-auto'>
             {
                 installed.map(i=><InstalledCard key={i.id} i={i} handleUninstall={handleUninstall}></InstalledCard>)
             }
             
         </div>
-        </>
+        </div>
     );
 };
 

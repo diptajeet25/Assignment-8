@@ -29,10 +29,7 @@ const handleInstall=()=>
     addItem(id);
     setStored(true)
 }
- 
-   
 
-   
     return (
         <div className='w-[90%] mx-auto my-16'>
            <div className='flex flex-col lg:flex-row gap-4 lg:gap-8 items-start '>

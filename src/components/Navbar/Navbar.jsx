@@ -8,20 +8,20 @@ import "./Navbar.css"
 const Navbar = () => {
     const link=
     <>
-<li className='text-lg'>
-  <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
+<li className='text-lg font-bold'>
+  <NavLink to="/" className={({ isActive }) => (isActive ? "active text-purple-800" : "")}>
     Home
   </NavLink>
 </li>
 
-<li className='text-lg'>
-  <NavLink to="/apps"  className={({ isActive }) => (isActive ? "active" : "")}>
+<li className='text-lg font-bold'>
+  <NavLink to="/apps"  className={({ isActive }) => (isActive ? "active text-purple-800" : "")}>
     Apps
   </NavLink>
 </li>
 
-<li className='text-lg'>
-  <NavLink to="/installed"  className={({ isActive }) => (isActive ? "active" : "noactive")}>
+<li className='text-lg font-bold'>
+  <NavLink to="/installed"  className={({ isActive }) => (isActive ? "active text-purple-800" : "noactive")}>
     Installation
   </NavLink>
 </li>

@@ -11,7 +11,7 @@ const Apps = () => {
     {
         
         e.preventDefault();
-        console.log(e.target.value);
+        
         let searchResult = useData.filter(a => 
             a.title.toLowerCase().startsWith(e.target.value.toLowerCase()));
 setAppList(searchResult)

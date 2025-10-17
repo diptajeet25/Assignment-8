@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router';
 const Cards = ({trendApps}) => {
     const navigate=useNavigate();
     const appsData=use(trendApps);
-    console.log(appsData);
+   
     return (
         <div className="flex flex-col justify-center items-center gap-4 mb-16">
             <div className='grid w-[90%] gap-4 gap-y-8 mx-auto grid-cols-1 lg:grid-cols-4'>
