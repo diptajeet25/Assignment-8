@@ -6,3 +6,8 @@ a.active {
 a.noactive {
   border-bottom: none;
 }
+#logo.active
+{
+   border-bottom: 0px solid purple;
+
+}

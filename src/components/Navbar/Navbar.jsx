@@ -21,7 +21,7 @@ const Navbar = () => {
 </li>
 
 <li className='text-lg'>
-  <NavLink  className={({ isActive }) => (isActive ? "active" : "noactive")}>
+  <NavLink to="/installed"  className={({ isActive }) => (isActive ? "active" : "noactive")}>
     Installation
   </NavLink>
 </li>
@@ -40,7 +40,7 @@ const Navbar = () => {
         {link}
       </ul>
     </div>
-    <NavLink to="/" className="btn btn-ghost text-xl"><img src={logo} className='h-10' alt="" /><span className='text-2xl text-purple-600'>HERO.IO</span></NavLink>
+    <NavLink to="/" id="logo" className="btn btn-ghost text-xl"><img src={logo} className='h-10' alt="" /><span className='text-2xl text-purple-600'>HERO.IO</span></NavLink>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">

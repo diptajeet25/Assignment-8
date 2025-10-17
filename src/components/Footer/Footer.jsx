@@ -51,11 +51,11 @@ const Footer = () => {
   
 </footer>
 <p className='border-t-1 border-white'></p>
-<footer className="footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-4">
-  <aside>
+<footer className="footer mt-auto mb-0 sm:footer-horizontal footer-center bg-base-300 text-base-content p-4">
     <p >Copyright © {new Date().getFullYear()} - All right reserved </p>
-  </aside>
+
 </footer>
+
 </>
     );
 };

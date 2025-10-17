@@ -2,12 +2,14 @@ import React from 'react';
 import download from "../../assets/icon-downloads.png"
 import rating from "../../assets/icon-ratings.png"
 import AppDetails from '../AppDetails/AppDetails';
+import { useNavigate } from 'react-router';
 
 const Card = ({app}) => {
+  const navigate=useNavigate();
    
-    const{title,image,downloads,ratingAvg}=app
+    const{title,image,downloads,ratingAvg,id}=app
     return (
-        <div onClick={<AppDetails app={app}></AppDetails>}>
+        <div onClick={()=>navigate(`/apps/${id}`)}>
             <div className="card bg-gray-100 text-black border-1 border-black   shadow-sm">
   <figure>
     <img
